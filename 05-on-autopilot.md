@@ -104,7 +104,7 @@ Then tell me where to find the task in the app, and how to run it now as a test.
 Create a scheduled task called "Monday ideas brief" that runs every Monday at 7:30 a.m.
 The task's prompt must work on its own, so include the full path of this folder and
 tell it to read CLAUDE.md first. Each run should:
-1. Follow the ideate skill in .claude/skills/ideate/ to make this week's shortlist,
+1. Follow the ideate skill in ~/.claude/skills/ideate/ to make this week's shortlist,
    including the past week's voice memos.
 2. Follow the "On autopilot" rules: don't add anything to my Notion calendar (put
    suggested new rows in the lettered actions instead), save the shortlist in
@@ -125,7 +125,7 @@ Then tell me where to find the task in the app.
 Create a scheduled task called "[MY BRIEF]" that runs [WHEN].
 The task's prompt must work on its own, so include the full path of this folder and
 tell it to read CLAUDE.md first. Each run should:
-1. Follow the [MY SKILL] skill in .claude/skills/[MY SKILL]/ to make this week's
+1. Follow the [MY SKILL] skill in ~/.claude/skills/[MY SKILL]/ to make this week's
    shortlist.
 2. Follow the "On autopilot" rules: don't add or change anything in my apps (put
    suggestions in the lettered actions instead), save the shortlist in
@@ -153,7 +153,7 @@ Then tell me where to find the task in the app.
 
 **Check it worked:**
 1. Both emails arrived, and both reports are in `reports/`.
-2. Nothing in `wiki/`, `.claude/skills/` or your apps changed. (Ask Claude: *"Did either test run change anything other than reports/?"*)
+2. Nothing in `wiki/`, your skills or your apps changed. (Ask Claude: *"Did either test run change anything other than reports/?"*)
 
 **Then act on one:** in a normal chat, reply the way the report suggests, e.g. *"Open the latest weekly check report. Go ahead with A."* This is the whole loop: autopilot finds things, you decide, Claude does them.
 
@@ -191,7 +191,7 @@ while and I seem to be finishing, remind me to run /wrap-up.
 Then show me the skill in plain words, not the file.
 ```
 
-**What you should see:** Claude asks to save `.claude/skills/wrap-up/SKILL.md` (click **Allow**) and explains it back.
+**What you should see:** Claude asks to save `~/.claude/skills/wrap-up/SKILL.md` (click **Allow**) and explains it back. Like your other skills it works in any project, and it always saves to your second brain, so you can wrap up a chat you had somewhere else too. In the dry run, a chat in a client's project mixed client details with a change to the writer's publishing day. `/wrap-up` offered to save only the publishing day to the wiki, and suggested leaving the client's details in that project.
 
 > **For the technical:** you could make this fully automatic with a Claude Code *hook* that runs when a session ends. A skill you run on purpose is easier to set up, and you see what gets saved. Claude Code also has its own built-in memory; this course keeps everything in your wiki instead, so there's one place to look.
 

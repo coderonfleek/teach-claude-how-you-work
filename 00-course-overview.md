@@ -111,7 +111,7 @@ Claude Code on Windows uses a program called Git behind the scenes, so it needs 
 | **Connector** | A link between Claude and one of your apps (Notion, Gmail…), set up with a few clicks |
 | **MCP** | The technical standard connectors are built on. You'll see the word, but you don't need to know how it works |
 | **Read / write access** | *Read*: Claude can look at things in the app. *Write*: Claude can also create or change things there |
-| **Skill** | A saved workflow with your standards built in, which you run with a slash command like `/review` |
+| **Skill** | A saved workflow with your standards built in, which you run with a slash command like `/review`. Yours are saved for your whole computer, so they work in any project |
 | **Slash command** | Typing `/` and a skill's name in the chat box to run it |
 | **Skill test** | A small set of examples Claude uses to check a skill is actually better than a plain prompt |
 | **Scheduled task** | A job Claude runs by itself at set times, like every Monday at 9am |
@@ -148,8 +148,10 @@ my-work-brain/
 ├── drafts/            Articles in progress, one folder per article (the text and its diagram images)
 ├── baseline/          The "before" and "after" tests
 ├── practice/          Practice files from the sample pack (Lessons 3 and 4)
-├── reports/           Reports from your scheduled jobs (Lesson 5)
-└── .claude/skills/    Your skills: /ideate, /draft, /diagram, /review, /publish-medium, /wrap-up (a hidden folder)
+└── reports/           Reports from your scheduled jobs (Lesson 5)
+
+~/.claude/skills/      Your skills: /ideate, /draft, /diagram, /review, /publish-medium, /wrap-up
+                       (a hidden folder in your home folder, so they work in any project)
 ```
 
 > **File names may differ slightly.** Claude decides the exact names of wiki pages based on your material. If you can't find something, ask Claude: *"Which wiki page covers my voice?"*

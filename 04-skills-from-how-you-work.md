@@ -13,13 +13,13 @@ By the end of this lesson you'll have:
 
 > **Usage note:** heavy, close to Lesson 2. Drafting and reviewing a full article reads several wiki pages each time. If you hit your limit, carry on in the same chat when it resets.
 
-> **Click Allow when Claude saves a skill.** Skills live in a protected folder (`.claude`), so Claude asks every time it saves or changes one, even if you've already let it edit other files. If you click Deny by mistake, say *"Save the skill again, I'll allow it."*
+> **Click Allow when Claude saves a skill.** Skills live in a protected folder (`.claude`, in your home folder), so Claude asks every time it saves or changes one, even if you've already let it edit other files. If you click Deny by mistake, say *"Save the skill again, I'll allow it."*
 
 ### The five parts of this lesson
 
 | Part | What you do | What you get |
 |---|---|---|
-| **A** | Find your skills, and set the rules every skill follows | A ranked list of skills, and a "My skills" section in `CLAUDE.md` |
+| **A** | Find your skills, and set the rules every skill follows | A ranked list of skills, a "My skills" section in `CLAUDE.md`, and access to your second brain from any project |
 | **B** | Build and run `/ideate` | New ideas added to your Notion calendar |
 | **C** | Build and run `/draft`, `/diagram` and `/review` | A drafted article with a diagram, reviewed, then redrafted from your email reply |
 | **D** | Build and run `/publish-medium` | The article as a Medium draft, plus a copy-and-paste fallback |
@@ -43,17 +43,19 @@ Open a **new chat** in `my-work-brain` for this lesson.
 
 **What this does:** shows you where skills live before you make any. Nothing to send yet.
 
-A skill is a **folder with one instruction file in it**, `SKILL.md`, saved in your project's hidden `.claude/skills/` folder. The file says:
+A skill is a **folder with one instruction file in it**, `SKILL.md`, saved in your **personal skills folder**: a hidden `.claude/skills/` folder in your home folder (on a Mac `~/.claude/skills/`, on Windows `C:\Users\<you>\.claude\skills\`). It's not inside `my-work-brain`, so **your skills work in any project you open on this computer**, not just this one. The file says:
 - **what the skill is for**, in one or two sentences, so Claude knows when to use it
 - **the steps**, in order
-- **which wiki pages to read** for the standards, e.g. `voice.md` and `review-checklist.md`
+- **where your second brain is**, by its full path, and **which wiki pages to read** for the standards, e.g. `voice.md` and `review-checklist.md`
 - **what it may do in your apps**, following your "My apps" rules
 
 You run a skill by typing **`/`** in the chat box and picking it from the list, e.g. `/review`. You can add details after the name: `/review drafts/turn-the-ai-off/draft.md`.
 
 **Do this:** type `/` in the chat box now. You'll see the commands that come with the app. After this lesson, your own five skills are in that list too.
 
-> **For the technical:** skills are Claude Code Agent Skills. Each one is `.claude/skills/<name>/SKILL.md`, with YAML front matter (`name`, `description`) and Markdown instructions. Claude loads only the description until the skill is used, so having many skills costs almost nothing.
+> **Why the full path?** A chat in another project doesn't read `my-work-brain/CLAUDE.md` or your wiki on its own. So every skill starts by reading them from their full path, and saves its work in `my-work-brain/drafts/`, wherever you run it from. In Step 3 you also give every project permission to open `my-work-brain`. If you ever move or rename `my-work-brain`, tell Claude: *"I moved my second brain to [new place]. Update my skills."*
+
+> **For the technical:** skills are Claude Code Agent Skills. Personal skills live in `~/.claude/skills/<name>/SKILL.md` and load in every project; project skills in `<project>/.claude/skills/` load only there. Each has YAML front matter (`name`, `description`) and Markdown instructions. Claude loads only the description until the skill is used, so having many skills costs almost nothing.
 
 ### Step 2 — Let Claude find your skills
 
@@ -124,26 +126,45 @@ A digest of Dan's feedback is a good one to keep for Lesson 5.
 
 ```text
 Add a "My skills" section to CLAUDE.md, in plain words:
-1. Skills live in .claude/skills/<name>/SKILL.md. Each one says what it's for, its
-   steps, which wiki pages it reads, and what it may do in my apps.
-2. Skills read my wiki pages for my standards. They never copy rules out of the wiki,
+1. Skills live in my personal skills folder, ~/.claude/skills/<name>/SKILL.md, not in
+   this folder, so I can use them in any project on this computer. Each one says what
+   it's for, its steps, which wiki pages it reads, and what it may do in my apps.
+2. Because a skill may run from another project, every skill starts by reading this
+   folder's CLAUDE.md by its full path, and uses full paths for the wiki, raw/ and
+   drafts/. Its work always goes in this folder, wherever I run it from.
+3. Skills read my wiki pages for my standards. They never copy rules out of the wiki,
    so when the wiki improves, every skill improves.
-3. Skills follow the "My apps" rules, and ask before anything that creates or sends.
-4. Skills never make up facts about my life or work: no invented moments, numbers,
+4. Skills follow the "My apps" rules, and ask before anything that creates or sends.
+5. Skills never make up facts about my life or work: no invented moments, numbers,
    names or quotes. If something's missing, leave a gap in [square brackets] and tell me.
-5. Work in progress goes in drafts/<short-name>/, one folder per piece of work. Never
+6. Work in progress goes in drafts/<short-name>/, one folder per piece of work. Never
    overwrite an earlier version: save the next one alongside it (draft-2.md, draft-3.md…).
-6. Every skill ends with a short list: which wiki pages and rules it followed, and
+7. Every skill ends with a short list: which wiki pages and rules it followed, and
    anything it wasn't sure about.
-7. When I correct a skill's output, decide where the fix belongs: a rule about my work
+8. When I correct a skill's output, decide where the fix belongs: a rule about my work
    goes on the right wiki page, and a change to the steps goes in the skill. Make the
    fix, add a line to CHANGELOG.md, and tell me in one sentence where it went.
 Add a line to CHANGELOG.md too.
 ```
 
-**What you should see:** Claude adds the section and confirms in a few bullets.
+**What you should see:** Claude adds the section and confirms in a few bullets, including the folder's full path it wrote into rule 2.
 
-**Check it worked:** open `CLAUDE.md`. There's a **My skills** section with all seven rules.
+**Check it worked:** open `CLAUDE.md`. There's a **My skills** section with all eight rules.
+
+**Then let your other projects reach this folder.** Out of the box, a chat in one project can only open that project's files. In the dry run, `/review` run from a client project stopped at its first step because it wasn't allowed to read `my-work-brain`. This one-time setting fixes that for every project on your computer.
+
+**Send this to Claude** (works for any job as it is):
+
+```text
+So my skills can reach this folder from any project, add this folder's full path and my
+personal skills folder (~/.claude/skills) to "additionalDirectories" in my user settings
+(~/.claude/settings.json). Keep everything else in that file as it is. Before you change
+it, tell me in one sentence what this does.
+```
+
+**What you should see:** a one-sentence explanation, something like *"Every chat on this computer will be able to open files in my-work-brain and your skills folder, wherever it starts."* Then Claude asks to change your settings file: click **Allow**.
+
+> **Only do this for your second brain.** It lets every project read the folder, which is the point. Don't add folders with things other projects shouldn't see.
 
 ---
 
@@ -193,7 +214,7 @@ Build a skill called "ideate". When I run /ideate, it should:
 Then show me the skill in plain words, not the file.
 ```
 
-**What you should see:** Claude asks to save `.claude/skills/ideate/SKILL.md` (click **Allow**) and explains the skill back step by step. Expect it to have thought of details you didn't ask for, e.g. *"New ideas must come from one memo or comment. It never merges two into one."*
+**What you should see:** Claude asks to save `~/.claude/skills/ideate/SKILL.md` (click **Allow**) and explains the skill back step by step. Expect it to have thought of details you didn't ask for, e.g. *"New ideas must come from one memo or comment. It never merges two into one."*
 
 **Check it worked:** type `/` in the chat box. **ideate** is in the list. (If it isn't, open a new chat and try again.)
 
@@ -296,7 +317,7 @@ Both modes end with the list of pages and rules followed. Then show me the skill
 words, not the file.
 ```
 
-**What you should see:** Claude asks to save `.claude/skills/draft/SKILL.md` (click **Allow**) and explains both modes. It usually adds safeguards of its own, e.g. *"It lists every fact it may use, with where it came from. Nothing else may go in."* and *"Replies count as Dan's only if they come from an address he's really used."*
+**What you should see:** Claude asks to save `~/.claude/skills/draft/SKILL.md` (click **Allow**) and explains both modes. It usually adds safeguards of its own, e.g. *"It lists every fact it may use, with where it came from. Nothing else may go in."* and *"Replies count as Dan's only if they come from an address he's really used."*
 
 ### Step 7 — Run `/draft`
 
@@ -431,7 +452,7 @@ Build a skill called "review". When I run /review <short-name>, it should:
 Then show me the skill in plain words, not the file.
 ```
 
-**What you should see:** Claude asks to save `.claude/skills/review/SKILL.md` (click **Allow**) and explains it back.
+**What you should see:** Claude asks to save `~/.claude/skills/review/SKILL.md` (click **Allow**) and explains it back.
 
 ### Step 10 — Run `/review`
 
@@ -531,7 +552,7 @@ Build a skill called "[SKILL NAME]". When I run /[SKILL NAME] <short-name>, it s
 Then show me the skill in plain words, not the file.
 ```
 
-**What you should see:** Claude asks to save `.claude/skills/publish-medium/SKILL.md` (click **Allow**) and explains it back, including the fallback.
+**What you should see:** Claude asks to save `~/.claude/skills/publish-medium/SKILL.md` (click **Allow**) and explains it back, including the fallback.
 
 ### Step 13 — Run `/publish-medium`
 
@@ -601,7 +622,7 @@ Then it suggests improvements, numbered, e.g. *"Always re-add any total in the h
 
 ### Step 15 — Correct a skill, and watch where the fix goes
 
-**What this does:** shows rule 7 from Step 3 at work. Corrections are how skills get better, and each one lands in the right place.
+**What this does:** shows rule 8 from Step 3 at work. Corrections are how skills get better, and each one lands in the right place.
 
 **Send this to Claude** (works for any job as it is; send one or both):
 
@@ -626,14 +647,14 @@ Claude also checks the work it already made against the new rule, and tells you 
 
 ## What you have now
 
-- ✅ **Five skills** in `.claude/skills/`, found in your work, all reading the same wiki
+- ✅ **Five skills** in your personal skills folder, found in your work, all reading the same wiki, and ready in any project
 - ✅ **An idea added to your Notion calendar** by `/ideate`
 - ✅ **A drafted, reviewed and redrafted article**, with a diagram in your style and alt text, in `drafts/`
 - ✅ **A review that reached your inbox**, and a redraft that followed your reply
 - ✅ **A Medium draft**, put there by Claude and published (or deleted) by you
 - ✅ **A tested skill**, and corrections that land in the right place
 
-Type `/` in a new chat. Your five skills are there. In Lesson 5 some of them start running by themselves.
+Type `/` in a new chat. Your five skills are there, **in any folder**: try it in a chat started somewhere else. In the dry run, `/review turn-the-ai-off` run from a client's newsletter project still read the wiki, saved its notes in `my-work-brain/drafts/` and left the client's folder alone. In Lesson 5 some of your skills start running by themselves.
 
 ## Other jobs
 
@@ -652,7 +673,9 @@ Every role ends up with a similar set: something to choose the work, something t
 | What you see | What to tell Claude, or do |
 |---|---|
 | Claude says it couldn't save the skill | You probably clicked **Deny**, or missed the prompt. *"Save the skill again, I'll allow it."* |
-| Your skill isn't in the `/` list | Open a new chat. If it's still missing: *"Check that the review skill is saved in .claude/skills/review/SKILL.md."* |
+| Your skill isn't in the `/` list | Open a new chat. If it's still missing: *"Check that the review skill is saved in my personal skills folder, ~/.claude/skills/review/SKILL.md."* |
+| A skill run from another project says it can't read your second brain | The setting at the end of Step 3 is missing. *"Add my second brain's full path and ~/.claude/skills to additionalDirectories in my user settings."* Then open a new chat |
+| A skill run from another project can't find your wiki, or saves its work in the wrong place | *"Make every skill read my second brain's CLAUDE.md by its full path, and save its work in my second brain's drafts/."* |
 | A skill copied rules from the wiki into itself | *"Don't copy rules into the skill. Point it at the wiki page instead."* |
 | The draft has facts you never gave it | *"Where did that come from? My skill rules say never invent facts. Fix the draft and tell me why it happened."* |
 | `/draft` left lots of [square brackets] | That's the rule working: your notes didn't have those facts. Fill them in, or add more notes to `raw/notes/` and *add* them |
