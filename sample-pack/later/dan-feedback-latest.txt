@@ -1,0 +1,24 @@
+From: Dan Mercer <dan@slowsystems.pub>
+To: Maya Reed <maya.reed.writes@gmail.com>
+Date: Mon, 9 Nov 2026 10:14
+Subject: Re: Inbox triage draft — headline (again) + two new house rules
+
+Hi Maya,
+
+The inbox piece is strong. The AI filing a kind note from your old editor under "Promotions" is a painful, perfect "What didn't work" moment. Keep it exactly as is.
+
+Now the bit you knew was coming. The headline over-promises again: "I Let an AI Run My Inbox and Never Answered an Email Again." You answered 31 emails yourself in the two weeks; it's in your own table. This is the second time since my September note on the planner piece, so I'd move "check the headline against the body" right to the top of your edit checklist, before anything else. "Two Weeks of Letting an AI Triage My Inbox" is honest and still makes me want to click.
+
+Two new things, and these apply to everything from now on, not just this piece:
+
+1. Please stop using "agentic". It's in this draft three times. Most of our readers don't know the word, and the ones who do are tired of it. Say what the thing actually does: "it sorted my inbox on its own".
+
+2. Add alt text to every diagram. Your diagrams often carry the whole argument, so a reader using a screen reader currently gets nothing. A sentence or two describing what goes where and what the arrows mean is enough.
+
+Revised draft by Thursday?
+
+Dan
+
+--
+Dan Mercer
+Editor, Slow Systems

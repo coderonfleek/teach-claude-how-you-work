@@ -1,0 +1,26 @@
+From: Dan Mercer <dan@slowsystems.pub>
+To: Maya Reed <maya.reed.writes@gmail.com>
+Date: Tue, 17 Feb 2026 09:42
+Subject: Re: Draft — what a chatbot actually does
+
+Hi Maya,
+
+Read it on the train this morning, which felt fitting. This is a good one. The "it's predicting the next word, the way you predict the end of your partner's sentence" line is exactly the kind of analogy our readers will steal and repeat in meetings. Keep it.
+
+Three small things:
+
+1. Cut the first paragraph. "Before we get into agents, I want to take a step back and talk about something more basic" is you clearing your throat. The piece really starts at "Last Tuesday at 7:40 in the evening, my partner was standing at the open fridge." Start there.
+
+2. Crop the diagram export. There's a grey "Frame" label in the top-left corner and a faint border around the whole thing. Looks like Excalidraw left its frame on. Easy fix, but readers notice.
+
+3. "Most people use it wrong" — most how? If you have even a rough number from your own team chat, use it.
+
+The "What didn't work" section is the best part. You admitting you lost 25 minutes arguing with it, and that it gave you a platform number for a cancelled train, does more for trust than any explanation could. More of that, always.
+
+Send it back when you're ready and I'll schedule it for early March.
+
+Dan
+
+--
+Dan Mercer
+Editor, Slow Systems

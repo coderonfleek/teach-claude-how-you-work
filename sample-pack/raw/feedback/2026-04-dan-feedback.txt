@@ -1,0 +1,26 @@
+From: Dan Mercer <dan@slowsystems.pub>
+To: Maya Reed <maya.reed.writes@gmail.com>
+Date: Thu, 23 Apr 2026 16:05
+Subject: Re: The loop behind every AI agent (draft 1)
+
+Hi Maya,
+
+The grocery run is a brilliant frame. "Limes first, they're for Thursday." Then the empty crate, then "No limes. Lemons will do." I understood the loop instantly, and I've read three white papers on this that didn't manage it.
+
+Two things before it goes out:
+
+1. "This loop makes agents dramatically better at hard tasks." Dramatically by how much? You tested it on your own research task, so give me the number. Something like "it got 6 of 10 sources right the first time, and 9 of 10 with the check step" is worth more than any adjective.
+
+2. "Unlock" appears twice ("unlock the real power", "unlock better results"). It's on the list for a reason. Just say what actually happens.
+
+Also: the diagram is lovely. The green for the thinking step and the pink for the check reads well, even small.
+
+Your "What didn't work" bit about the agent looping 11 times over "a good notebook" and never picking one is the bit people will remember. It's funny and it's honest. Don't let anyone talk you into trimming it.
+
+Fix those two and it's ready for the 15th.
+
+Dan
+
+--
+Dan Mercer
+Editor, Slow Systems

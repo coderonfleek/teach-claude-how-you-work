@@ -1,0 +1,24 @@
+From: Dan Mercer <dan@slowsystems.pub>
+To: Maya Reed <maya.reed.writes@gmail.com>
+Date: Mon, 22 Jun 2026 11:18
+Subject: Re: Do you need an AI agent — notes
+
+Hi Maya,
+
+The flowchart is the hero here and the writing mostly gets out of its way, which is right. "A month of building agents I didn't need" is a great confession to build a piece on.
+
+Two notes, one of them familiar:
+
+1. The first paragraph is throat-clearing again. "There's been a lot of talk lately about AI agents, and I've been thinking about whether they're actually useful" could open anyone's article. Yours starts at "On the last Sunday of June I sat on the back step with a coffee." I know this is becoming a running joke between us. Maybe put it on a sticky note.
+
+2. Too many hedges. I counted 11 "I think"s and 6 "maybe"s. You built the things, you tested them, you deleted them. You're allowed to be sure. Keep a hedge where you genuinely don't know (the bit about team-wide agents is fair), and cut the rest. "I think most people don't need an agent" becomes "Most people don't need an agent." Stronger and still honest.
+
+The "What didn't work" section is great again. "14 hours in a month is roughly three articles I didn't write" made me laugh out loud at my desk, and then wince.
+
+Back to me by Friday and it goes out early July.
+
+Dan
+
+--
+Dan Mercer
+Editor, Slow Systems
