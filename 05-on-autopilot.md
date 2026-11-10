@@ -191,7 +191,7 @@ while and I seem to be finishing, remind me to run /wrap-up.
 Then show me the skill in plain words, not the file.
 ```
 
-**What you should see:** Claude asks to save `~/.claude/skills/wrap-up/SKILL.md` (click **Allow**) and explains it back. Like your other skills it works in any project, and it always saves to your second brain, so you can wrap up a chat you had somewhere else too. In the dry run, a chat in a client's project mixed client details with a change to the writer's publishing day. `/wrap-up` offered to save only the publishing day to the wiki, and suggested leaving the client's details in that project.
+**What you should see:** Claude asks to save `~/.claude/skills/wrap-up/SKILL.md` (click **Allow**) and explains it back. Like your other skills it works in any project, and it always saves to your second brain, so you can wrap up a chat you had somewhere else too. If a chat in a client's project mixes client details with a change to your own way of working, `/wrap-up` offers to save only your change to the wiki, and suggests leaving the client's details in that project.
 
 > **For the technical:** you could make this fully automatic with a Claude Code *hook* that runs when a session ends. A skill you run on purpose is easier to set up, and you see what gets saved. Claude Code also has its own built-in memory; this course keeps everything in your wiki instead, so there's one place to look.
 
@@ -287,7 +287,7 @@ Save all of this as baseline/comparison.md.
 **What you should see:** with the sample pack, *"'After' passes 29 of your 33 checklist checks; 'before' passes 10."* Then:
 - **Five quoted differences,** e.g. *"Five reasons became one idea"* and *"'Start small. Save less. Use more.' became one thing to try and count."*
 - **What's still missing,** with the page or skill to fix, e.g. *"The draft skill could ask the gap questions at the outline stage."*
-- **A point-by-point check** against your Lesson 1 complaints: in the dry run, 7 of 9 fully fixed.
+- **A point-by-point check** against your Lesson 1 complaints: with the sample pack, expect about 7 of 9 fully fixed.
 
 Claude suggests the wiki and skill changes but doesn't make them until you say which.
 

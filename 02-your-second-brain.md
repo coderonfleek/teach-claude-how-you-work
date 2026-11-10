@@ -234,7 +234,7 @@ With exact measuring allowed, the colour codes are exact (the sample pack's are 
 
 **Check it worked:**
 1. Open **`wiki/visual-style.md`** next to two or three of your images. Does every rule match what you see?
-2. Ask Claude: *"Describe, piece by piece, how you'd make the visual idea from baseline/before.md in my style."* The description should sound like one of yours: which shapes, which colour each one gets and why, the arrows and the labels. (Claude makes real images in Lesson 4.) Don't be surprised if Claude also questions the idea itself. In the dry run it pointed out that the diagram illustrated a different idea from the one the writer said was worth keeping, and suggested a better one.
+2. Ask Claude: *"Describe, piece by piece, how you'd make the visual idea from baseline/before.md in my style."* The description should sound like one of yours: which shapes, which colour each one gets and why, the arrows and the labels. (Claude makes real images in Lesson 4.) Don't be surprised if Claude also questions the idea itself. With the sample pack, it may point out that the diagram illustrates a different idea from the one the writer said was worth keeping, and suggest a better one.
 
 **If it's not right:**
 - *"The blue is wrong. It's lighter, like the boxes in 03-react-loop-grocery-run.png. Please measure it again."*
@@ -270,7 +270,7 @@ add raw/[FOLDER]/[FILE NAME]
 
 **What you should see:** a short report, for example *"Dan flags an over-promising headline for the second time, so I moved that check near the top of review-checklist.md. He also asks you to stop using 'agentic' (added to voice.md under words you never use) and to add alt text to every diagram (added to visual-style.md). I updated people/dan.md and logged it."*
 
-If the new material disagrees with something you said earlier, Claude asks you which wins. In the dry run, Dan wanted the headline check moved to the top of the checklist, but the writer had said she edits the headline last. Claude offered a middle way: keep writing the headline last, but make "headline matches body" the first check.
+If the new material disagrees with something you said earlier, Claude asks you which wins. With the sample pack, for example, Dan wants the headline check moved to the top of the checklist, but the writer said she edits the headline last. Claude may offer a middle way: keep writing the headline last, but make "headline matches body" the first check.
 
 **Check it worked:** open `wiki/log.md`. There's a new dated line for this add, naming the pages that changed.
 

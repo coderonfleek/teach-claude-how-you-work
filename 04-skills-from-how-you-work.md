@@ -78,7 +78,7 @@ Rank them by how much time they'd save me each week, and say which you'd build f
 Don't build anything yet.
 ```
 
-**What you should see:** a ranked table of 5–7 skills, each with an estimate of the time it saves and the numbers behind it. Claude's names and groupings won't match this lesson exactly. In the dry run it suggested `ideas`, `edit`, `diagram`, `review`, `memos`, `prepublish` and `dan`, and folded memo sorting into the ideas skill. The jobs are the same; the names are yours to choose.
+**What you should see:** a ranked table of 5–7 skills, each with an estimate of the time it saves and the numbers behind it. Claude's names and groupings won't match this lesson exactly. With the sample pack it may suggest something like `ideas`, `edit`, `diagram`, `review`, `memos`, `prepublish` and `dan`, with memo sorting folded into the ideas skill. The jobs are the same; the names are yours to choose.
 
 Then tell Claude which ones you want. Building comes next, one skill at a time.
 
@@ -151,7 +151,7 @@ Add a line to CHANGELOG.md too.
 
 **Check it worked:** open `CLAUDE.md`. There's a **My skills** section with all eight rules.
 
-**Then let your other projects reach this folder.** Out of the box, a chat in one project can only open that project's files. In the dry run, `/review` run from a client project stopped at its first step because it wasn't allowed to read `my-work-brain`. This one-time setting fixes that for every project on your computer.
+**Then let your other projects reach this folder.** Out of the box, a chat in one project can only open that project's files. Without this setting, a skill run from another project stops at its first step, because it isn't allowed to read `my-work-brain`. This one-time setting fixes that for every project on your computer.
 
 **Send this to Claude** (works for any job as it is):
 
@@ -397,14 +397,14 @@ Then run it for <short-name of the piece I'm working on>.
 
 **What you should see:** Claude works out how to make images on your computer (it may ask to run a few commands: click **Allow**), creates the skill, and then shows a plan as a small table: *"A pink diamond, label above it: 'Fixing Takes Longer?'. Yes → a white rounded box: 'Turn It Off'. No → a white rounded box: 'Keep It'. Dashed lines from both back up to the diamond: 'In a Month'."* It also lists where the plan bends one of your rules and asks you to choose, e.g. *"Your question is 7 words but your labels are 1–3 words. Shorten it to 'Fixing Takes Longer?'"* Reply *"OK to all four"* or choose differently. Then it draws the PNG (about 1–2 minutes) and checks it against one of your old diagrams.
 
-> **How Claude makes the image:** in the dry run on a Mac, it wrote a small drawing script using Python and the Mac's built-in **Chalkboard SE** handwriting font, and saved the script inside the skill's folder so every diagram is made the same way. On another computer it may need to install something first (for example Python's image library): it asks before it does. A skill's folder can hold helper files like this alongside `SKILL.md`.
+> **How Claude makes the image:** on a Mac, it typically writes a small drawing script using Python and the Mac's built-in **Chalkboard SE** handwriting font, and saves the script inside the skill's folder so every diagram is made the same way. On another computer it may need to install something first (for example Python's image library): it asks before it does. A skill's folder can hold helper files like this alongside `SKILL.md`.
 
 **Check it worked:** open the new image next to one of your old ones from `raw/visuals/`.
 1. Same feel: white background, hand-drawn look, handwritten lettering?
 2. Colours used the way your colour key says?
 3. Short labels? Alt text in `diagrams.md`, two sentences at most?
 
-It won't be pixel-identical to a hand-made Excalidraw drawing. In the dry run, the shapes, colours, wobbly lines and arrowheads matched closely, and the lettering was the main difference: neater than Excalidraw's. It should look like it belongs in the same article. Next to the image, Claude also saves the plan (`diagram-1.json`), so the diagram can be redrawn exactly after a correction.
+It won't be pixel-identical to a hand-made Excalidraw drawing. Expect the shapes, colours, wobbly lines and arrowheads to match closely. The lettering is usually the main difference: neater than Excalidraw's. It should look like it belongs in the same article. Next to the image, Claude also saves the plan (`diagram-1.json`), so the diagram can be redrawn exactly after a correction.
 
 > **Want closer lettering?** Ask Claude: *"Can you use Excalidraw's own handwriting font? It's free. Tell me where you'd download it from before you do."*
 
@@ -479,7 +479,7 @@ Then show me the skill in plain words, not the file.
 
 > *Keep "This isn't an anti-AI piece", it's my line and it stays. Skip the length note: this is a short own-profile piece, 700-ish words is fine for my profile. For note 2, cut "but less often". Headline: I Went Back to Paper for Three Days. Even My AI Planner's Best Day Lost. Subtitle: Fixing its plans took 82 minutes in a week. Planning on paper took 18 minutes for three days. Everything else: yes.*
 
-(This is the reply from the dry run, in the sample pack's `sample-answers.md`. Change the note numbers to fit the notes you actually got.)
+(This reply is also in the sample pack's `sample-answers.md`. Change the note numbers to fit the notes you actually got.)
 
 **Send this to Claude** (works for any job as it is; use your own short name):
 
@@ -489,7 +489,7 @@ Then show me the skill in plain words, not the file.
 
 **What you should see:** *"Both messages in the thread came from your own address: my review and your reply at 17:31. Saved as draft-2.md."* Then a list of what changed, each marked with where it came from (*"your reply"* or *"note 3"*), and a list of what was **kept on purpose** because your reply said so, e.g. *"'This isn't an anti-AI piece.' You said it's my line and it stays."*
 
-Claude may also spot that something in your reply is a **rule**, not a one-off, and offer to save it. In the dry run: *"'700-ish words is fine for my profile' sounds like a rule about your work. Shall I update the length rule on standards.md and review-checklist.md?"* Say yes. Claude saves your reply into `raw/feedback/` first, then updates the wiki, so the next review won't flag it.
+Claude may also spot that something in your reply is a **rule**, not a one-off, and offer to save it, e.g. *"'700-ish words is fine for my profile' sounds like a rule about your work. Shall I update the length rule on standards.md and review-checklist.md?"* Say yes. Claude saves your reply into `raw/feedback/` first, then updates the wiki, so the next review won't flag it.
 
 **Check it worked:**
 1. `draft-2.md` exists, and `draft.md` is unchanged.
@@ -654,7 +654,7 @@ Claude also checks the work it already made against the new rule, and tells you 
 - ✅ **A Medium draft**, put there by Claude and published (or deleted) by you
 - ✅ **A tested skill**, and corrections that land in the right place
 
-Type `/` in a new chat. Your five skills are there, **in any folder**: try it in a chat started somewhere else. In the dry run, `/review turn-the-ai-off` run from a client's newsletter project still read the wiki, saved its notes in `my-work-brain/drafts/` and left the client's folder alone. In Lesson 5 some of your skills start running by themselves.
+Type `/` in a new chat. Your five skills are there, **in any folder**: try it in a chat started somewhere else. Run from, say, a client's project, `/review turn-the-ai-off` still reads your wiki, saves its notes in `my-work-brain/drafts/` and leaves the client's folder alone. In Lesson 5 some of your skills start running by themselves.
 
 ## Other jobs
 

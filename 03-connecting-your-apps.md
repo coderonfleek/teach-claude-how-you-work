@@ -203,7 +203,7 @@ Add a line to CHANGELOG.md. Then show me the table.
 | Gmail | Dan's feedback, review notes | Read. Send email only to me, after asking. Never reply to or email anyone else |
 | Medium | Publishing | Create drafts only. Never publish |
 
-Claude will probably also find **clashes with your older rules** and ask about each one. In the dry run there were three:
+Claude will probably also find **clashes with your older rules** and ask about each one. With the sample pack, expect these three:
 1. Your work map says Gmail is *read only*, but the new rule lets Claude email you.
 2. The work map doesn't allow creating anything in Gmail, but the new rule allows a draft to you when sending isn't available.
 3. `CLAUDE.md` calls `raw/` *read-only for Claude*, but Claude now saves copies there.

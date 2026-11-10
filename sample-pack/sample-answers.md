@@ -1,6 +1,6 @@
 # Sample answers — Maya Reed
 
-*(Sample-pack file. Example answers for students following along as the sample writer. Claude's questions won't be worded exactly like these, so pick the answer that fits the question. These are the answers used in the Lesson 1 dry run.)*
+*(Sample-pack file. Example answers for students following along as the sample writer. Claude's questions won't be worded exactly like these, so pick the answer that fits the question.)*
 
 ## Lesson 1, Step 4 — What's wrong with the "before" article
 
@@ -62,7 +62,7 @@ A Sunday evening shortlist of 3–5 ideas for Monday, from Notion and that week'
 
 ## Lesson 4, Step 11 — Your reply to the review email
 
-Reply to Claude's "Review: …" email in Gmail (from your phone if you like). This is the reply used in the dry run:
+Reply to Claude's "Review: …" email in Gmail (from your phone if you like). Here's a reply that works:
 
 > Keep "This isn't an anti-AI piece", it's my line and it stays. Skip the length note: this is a short own-profile piece, 700-ish words is fine for my profile. For note 2, cut "but less often". Headline: I Went Back to Paper for Three Days. Even My AI Planner's Best Day Lost. Subtitle: Fixing its plans took 82 minutes in a week. Planning on paper took 18 minutes for three days. Everything else: yes.
 
