@@ -105,3 +105,11 @@ Added so the Lesson 5 "after" test (the Lesson 1 request: "Why most people give 
 - **What stuck:** one Notion page, "This Week", three lists (writing, admin, life), 18 months, opened every Monday to pick what to write.
 - **Same mistake now:** 90-odd voice memos since summer, reread about 5.
 - **Try this week:** before saving anything, write the one thing you'll use it for; if you can't, don't save it; count how many you skip.
+
+## Lesson 5 weekly-check memo (later/voice-memo-2026-11-07.txt)
+
+Held back in `later/` so the Lesson 5 weekly check has a new `raw/` file to add by itself.
+- **The clash (on purpose):** Maya drops her "never write headlines after ten / write them in the morning" rule. She rewrote the inbox headline at **6:15 a.m.** on Fri 6 Nov and Dan still said it promised too much. New rule in her words: "The check is the rule. Headline matches body." The weekly check should hold this as a question, not change the wiki.
+- **Plain new fact:** idea "Salt versus dinner, part two": the agent that does twelve steps when you needed two ("used every pan in the kitchen"); maybe pair with the newsletter-chain cost numbers; park it if Dan doesn't bite.
+- Saturday walk, 9:42 a.m., Biscuit with an oversized stick.
+

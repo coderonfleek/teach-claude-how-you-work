@@ -71,17 +71,22 @@ Please add a "My wiki" section to CLAUDE.md with these rules, in plain words:
    Use my own words in quotes wherever you can.
 4. index.md: the contents page. Every page, grouped by type, with its one-line summary.
    Read it first whenever you need to find something.
-5. log.md: a diary you only add to. Every change gets a dated line, e.g.
-   "2026-11-09 · add · read 10 pieces of past work, created voice.md and 6 other pages".
+5. log.md: a diary you only add to. Every change gets a dated line that names the raw/
+   files it used, e.g. "2026-11-09 · add · raw/past-work/ (all 10 files): created
+   voice.md and 6 other pages".
 6. The three habits, so I can just say the word:
    - "add <file>": read a new source, update every page it affects, update index.md and
-     log.md, and tell me what changed
+     log.md, and tell me what changed. Just "add", with no file: find every file in raw/
+     that log.md doesn't show as added yet, and add each one
    - "ask <question>": answer from the wiki (not from general knowledge), say which pages
      you used, and offer to save a useful answer as a new page
    - "tidy": check the whole wiki for contradictions, out-of-date claims, pages nothing links
      to, and gaps, then give me a short report and suggest fixes before making them
 7. When there's a contradiction (e.g. my old work does X but I now say I hate X), don't
-   pick one: note both on the page and ask me.
+   pick one. Keep what the wiki says for now, and add a numbered question to the open
+   questions on wiki/judgment-notes.md: both sides in quotes, where each came from, and
+   your suggested answer. Then ask me. When I answer, now or later, apply it, mark the
+   question answered with my words, and log it.
 
 Also create wiki/index.md and wiki/log.md (empty apart from a heading), and add a line to
 CHANGELOG.md. Don't write any other pages yet. When you're done, explain the rules back to
@@ -248,31 +253,25 @@ Your wiki is only useful if it stays up to date, and it stays up to date only if
 
 ### Step 5 — Add: feed it something new
 
-**What this does:** shows what happens when new material arrives. Claude doesn't just file it: it updates every page the new material affects, and tells you what changed.
+**What this does:** shows what happens when new material arrives. You don't have to tell Claude which file is new: it compares `raw/` with `log.md` and finds anything it hasn't added yet. It doesn't just file it: it updates every page the new material affects, and tells you what changed.
 
 **Do this:** copy one new file into the right `raw/` folder: a new piece of feedback, your latest piece of work, or a new idea list. For the course build, copy `later/dan-feedback-latest.txt` from the sample pack into `raw/feedback/`. It's a new email from Dan that flags something the wiki doesn't know yet.
 
-**Send this to Claude** (two versions, pick one):
-
-**Course build (writer):**
+**Send this to Claude** (works for any job as it is):
 
 ```text
-add raw/feedback/dan-feedback-latest.txt
+add
 ```
 
-**Your own work:**
-
-> **Fill in:** `[FOLDER]` and `[FILE NAME]` → the folder you put the new file in, and its name, e.g. *feedback* and *client-notes-march.pdf*, or *past-work* and *spring-sale-posts.docx*
-
-```text
-add raw/[FOLDER]/[FILE NAME]
-```
+(To add one particular file, name it: `add raw/feedback/dan-feedback-latest.txt`.)
 
 **What you should see:** a short report, for example *"Dan flags an over-promising headline for the second time, so I moved that check near the top of review-checklist.md. He also asks you to stop using 'agentic' (added to voice.md under words you never use) and to add alt text to every diagram (added to visual-style.md). I updated people/dan.md and logged it."*
 
-If the new material disagrees with something you said earlier, Claude asks you which wins. With the sample pack, for example, Dan wants the headline check moved to the top of the checklist, but the writer said she edits the headline last. Claude may offer a middle way: keep writing the headline last, but make "headline matches body" the first check.
+If the new material disagrees with something you said earlier, Claude doesn't pick a side. It keeps what the wiki says, writes the question on `judgment-notes.md` with its suggested answer, and asks you. With the sample pack, for example, Dan wants the headline check moved to the top of the checklist, but the writer said she edits the headline last. Claude may suggest a middle way: keep writing the headline last, but make "headline matches body" the first check. Answer now (*"Yes, do that"*) or later: the question waits on `judgment-notes.md` until you do.
 
-**Check it worked:** open `wiki/log.md`. There's a new dated line for this add, naming the pages that changed.
+**Check it worked:** open `wiki/log.md`. There's a new dated line for this add, naming the file and the pages that changed. Send `add` again: Claude should say there's nothing new in `raw/`.
+
+> **Why this matters:** your wiki should never be a chore to keep up. From now on, all you do is drop files into `raw/`. You don't need to remember what's new, and you don't have to answer questions on the spot. In Lesson 5, this add runs by itself every week, and the questions come to you by email.
 
 ### Step 6 — Ask: put your wiki to work
 
@@ -350,7 +349,7 @@ Start a new chat in `my-work-brain` and ask *"What do you know about how I write
 
 ## Other jobs
 
-Every prompt in this lesson works for any job as it is (Step 5's **Your own work** version just needs your file name): Claude builds the pages from *your* material and *your* work map. What changes is what ends up in the wiki. You'll see pages like these:
+Every prompt in this lesson works for any job as it is: Claude builds the pages from *your* material and *your* work map. What changes is what ends up in the wiki. You'll see pages like these:
 
 | If you're a… | `voice.md` and `standards.md` cover | `visual-style.md` covers |
 |---|---|---|
@@ -369,4 +368,5 @@ Every prompt in this lesson works for any job as it is (Step 5's **Your own work
 | Claude answers an `ask` from general knowledge | *"Answer only from my wiki, and tell me which pages you used. If the wiki doesn't say, tell me that instead."* |
 | Claude edited something in `raw/` | *"You changed a file in raw/. Please undo that and re-read the rules in CLAUDE.md."* |
 | The wiki has dozens of tiny pages | *"tidy, and suggest pages to merge."* |
+| `add` misses a file you put in `raw/`, or adds one twice | *"Check log.md against raw/. Which files are missing or listed twice? Fix the log, then add what's missing."* |
 | You hit your usage limit during the first add | Wait for it to reset, then in the same chat say: *"Carry on with the add where you left off. Check log.md to see what's done."* |

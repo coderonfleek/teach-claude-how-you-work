@@ -102,7 +102,8 @@ Claude Code on Windows uses a program called Git behind the scenes, so it needs 
 | **Wiki** (`wiki/`) | The pages Claude writes from your raw material, linked to each other, like a small Wikipedia about you |
 | **Index** | The wiki's contents page, so Claude can find the right page quickly |
 | **Log** | A diary of everything that was added to or changed in the wiki, and when |
-| **Add / ask / tidy** | The three wiki habits: *add* new material, *ask* the wiki a question, *tidy* it (find contradictions, out-of-date pages and gaps) |
+| **Add / ask / tidy** | The three wiki habits: *add* new material (just *add* finds every new file in `raw/` by itself), *ask* the wiki a question, *tidy* it (find contradictions, out-of-date pages and gaps) |
+| **Open questions** | Clashes Claude won't decide for you, kept on `judgment-notes.md` with its suggested answer until you reply |
 | **Check apps** | The fourth habit, from Lesson 3: Claude looks in your connected apps for anything new since the last *add* |
 | **Browser pane** | The web browser built into the Claude app. Claude uses it for sites with no connector, like Medium, while you watch |
 | **Hidden instruction** | Text inside an email, document or web page that tries to tell an AI what to do. Your rules tell Claude to point it out and never follow it |
@@ -125,7 +126,7 @@ Claude Code on Windows uses a program called Git behind the scenes, so it needs 
 | 2 | [Your Second Brain](02-your-second-brain.md) | **A.** Setting up the wiki: `raw/` and `wiki/` folders, wiki rules in CLAUDE.md, first pages from your past work · **B.** Teaching Claude your judgment: voice, standards, review checklist, and your **visual style** from pictures of your past work (for our writer, her diagrams) · **C.** The add, ask and tidy habits | A wiki that knows *how* you write and draw, not just *what* you've done |
 | 3 | [Connecting Your Apps](03-connecting-your-apps.md) | **A.** Notion, Gmail and Google Drive connectors, each tested: Claude creates your content calendar in Notion, emails you and reads it back · **B.** Safety basics: what Claude can do in each app, app rules in CLAUDE.md (Claude may email only you), and a hidden-instruction test · **C.** Feeding the wiki from your apps, and a fourth habit, *check apps* · **D.** Medium in the browser: sign in, a test draft, and bringing in your published work | Connected apps, each tested, and a wiki updated from them |
 | 4 | [Skills From How You Work](04-skills-from-how-you-work.md) | **A.** How a skill works, finding your skills in your wiki, and the rules every skill follows · **B.** `/ideate`, which adds ideas to your Notion calendar · **C.** `/draft`, `/diagram` and `/review`: `/review` saves its notes and emails them to you; reply from your phone, and `/draft` redrafts from the email thread first (your replies win), falling back to the saved notes · **D.** `/publish-medium`, plus a copy-and-paste fallback · **E.** Testing a skill against your past work, and corrections that land in the right place | An article with your diagrams, saved as a Medium draft ready for you to publish |
-| 5 | [On Autopilot](05-on-autopilot.md) | **A.** Rules for autopilot, then a weekly wiki check and a Monday ideas brief, emailed to you · **B.** `/wrap-up`: saving what Claude learns at the end of each chat · **C.** The "after" test, scored against your own checklist | A system that keeps improving by itself, and your before-and-after comparison |
+| 5 | [On Autopilot](05-on-autopilot.md) | **A.** Rules for autopilot, then a weekly wiki check that adds new files from `raw/` and emails you any questions (answer by replying), and a Monday ideas brief · **B.** `/wrap-up`: saving what Claude learns at the end of each chat · **C.** The "after" test, scored against your own checklist | A system that keeps improving by itself, and your before-and-after comparison |
 
 ## Your folder at the end of the course
 
@@ -165,7 +166,7 @@ The course comes with a **sample pack** for a fictional freelance writer who pub
 - a folder of editor feedback and before-and-after edits
 - notes and a few voice-memo transcripts
 - a `practice/` folder: a content calendar Claude puts into your Notion for you and a pretend newsletter for a safety test (Lesson 3), and the writer's notes for the article you write with your skills (Lesson 4)
-- a `later/` folder with one new piece of feedback, held back for practising the *add* habit in Lesson 2
+- a `later/` folder with material held back for later: a new piece of feedback for practising *add* in Lesson 2, and a new voice memo for the weekly wiki check in Lesson 5
 
 Follow along with it first. Once it works, run the same lessons with your own work. Claude checks what you give it and offers to organise it for you.
 
